@@ -1,9 +1,10 @@
 import React, { Fragment } from "react";
+import Header from "./Header.js";
 
 function App() {
   return (
     <Fragment>
-      <div>Phone Directory</div>
+      <Header />
       <button>Add</button>
       <div>
         <span>Name</span>
