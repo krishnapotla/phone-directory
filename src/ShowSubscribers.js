@@ -1,8 +1,8 @@
 import React, { Fragment, Component } from "react";
 import Header from "./Header.js";
-import "./App.css";
+import "./ShowSubscribers.css";
 
-class App extends Component {
+class ShowSubscribers extends Component {
   constructor() {
     super();
     this.state = {
@@ -20,7 +20,7 @@ class App extends Component {
             <span className="grid-item name-heading">Name</span>
             <span className="grid-item phone-heading">Phone</span>
           </div>
-          {this.state.subscribersListToShow.map(sub => {
+          {this.props.subscribersList.map(sub => {
             return (
               <div key={sub.id} className="grid-container">
                 <span className="grid-item">{sub.name}</span>
@@ -37,4 +37,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default ShowSubscribers;
